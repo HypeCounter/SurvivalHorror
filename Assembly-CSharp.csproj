@@ -66,8 +66,10 @@
     <Compile Include="Assets\Scripts\ColetarPistola.cs" />
     <Compile Include="Assets\Scripts\ControlaJogador.cs" />
     <Compile Include="Assets\Scripts\ControlaPorta.cs" />
+    <Compile Include="Assets\Scripts\Pistola.cs" />
     <Compile Include="Assets\Scripts\PrimeiroTrigger.cs" />
     <Compile Include="Assets\Scripts\TriggerZumbi.cs" />
+    <Compile Include="Assets\Scripts\Zumbi.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/aluno.ESTACIOACAD/Documents/Survival Horror/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

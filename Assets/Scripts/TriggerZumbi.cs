@@ -11,9 +11,10 @@ public class TriggerZumbi : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger ativo");
+        //Debug.Log("Trigger ativo");
         GetComponent<BoxCollider>().enabled = false;
         portaZumbi.GetComponent<Animation>().Play("porta2-anim01");
+        zumbi.SetActive(true);
         portaBatendo.Play();
         musicaSusto.Play();
     }

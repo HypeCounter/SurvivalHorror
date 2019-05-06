@@ -14,7 +14,7 @@ public class Abertura : MonoBehaviour
     void Start()
     {
         jogador.GetComponent<FirstPersonController>().enabled = false;
-
+        telaFadeIn.SetActive(true);
         StartCoroutine(ExibeTexto());
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ControlaJogador : MonoBehaviour {
 
-
+    [SerializeField] private int resistencia = 100;
     [SerializeField] private float distanciaParaAlvo;
 
     public float DistanciaParaAlvo
@@ -24,5 +24,16 @@ public class ControlaJogador : MonoBehaviour {
 
         Debug.DrawRay(this.transform.position,
             this.transform.TransformDirection(Vector3.forward) * 100, Color.yellow);
+
+        if(resistencia <= 0)
+        {
+            Time.timeScale = 0;
+        }
 	}
+
+    public void SofrerDano(int dano)
+    {
+        this.resistencia -= dano;
+        Debug.Log(resistencia);
+    }
 }
