@@ -31,9 +31,16 @@ public class Pistola : MonoBehaviour
         RaycastHit trajetoria;
         estaAtirando = true;
 
+        
+        efeitoDisparo.SetActive(true);
+        this.GetComponent<Animation>().Play("tiro-anim01");
+        efeitoDisparo.GetComponent<Animation>().Play("disparo-anim01");
+        somDisparo.Play();
+
         if (Physics.Raycast(balistica.transform.position,
                             transform.TransformDirection(Vector3.forward),
-                            out trajetoria)){
+                            out trajetoria))
+        {
 
             int dano = 10;
 
@@ -41,10 +48,6 @@ public class Pistola : MonoBehaviour
                                             dano,
                                             SendMessageOptions.DontRequireReceiver);
         }
-        efeitoDisparo.SetActive(true);
-        this.GetComponent<Animation>().Play("tiro-anim01");
-        efeitoDisparo.GetComponent<Animation>().Play("disparo-anim01");
-        somDisparo.Play();
 
         yield return new WaitForSeconds(.5f);
         estaAtirando = false;

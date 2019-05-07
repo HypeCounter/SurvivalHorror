@@ -119,7 +119,7 @@ public class Zumbi : MonoBehaviour
     private void Atacar()
     {
         int dano = 20;
-
+        
         jogador.GetComponent<ControlaJogador>().SofrerDano(dano);
     }
 }
