@@ -1,11 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class ControlaJogador : MonoBehaviour {
 
     [SerializeField] private int resistencia = 100;
     [SerializeField] private float distanciaParaAlvo;
+    [SerializeField] GameObject gameOver;
+    [SerializeField] private float tempoMorte = 10;
 
     public float DistanciaParaAlvo
     {
@@ -27,9 +32,29 @@ public class ControlaJogador : MonoBehaviour {
 
         if(resistencia <= 0)
         {
-            Time.timeScale = 0;
+            /// Jogador morto aqui
+            /// 
+            Death();
+
+           // Time.timeScale = 0;
         }
 	}
+
+    private void Death()
+    {
+
+
+        gameOver.SetActive(true);
+        StartCoroutine("WaitDeath");  
+     
+        
+    }
+
+    IEnumerator WaitDeath()
+    {
+        yield return new WaitForSeconds(tempoMorte);
+        SceneManager.LoadScene("001");
+    }
 
     public void SofrerDano(int dano)
     {

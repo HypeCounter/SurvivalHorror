@@ -47,8 +47,9 @@ public class Pistola : MonoBehaviour
             trajetoria.transform.SendMessage("SofrerDano",
                                             dano,
                                             SendMessageOptions.DontRequireReceiver);
+            Debug.Log(dano);
         }
-
+        
         yield return new WaitForSeconds(.5f);
         estaAtirando = false;
         efeitoDisparo.SetActive(false);
