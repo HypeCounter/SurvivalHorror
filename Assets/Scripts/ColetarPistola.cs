@@ -29,7 +29,7 @@ public class ColetarPistola : MonoBehaviour
             textoDoBotaoDeAcao.SetActive(true);
             miraExtra.SetActive(true);
             textoDaAcao.GetComponent<Text>().text = "Pegar pistola";
-            Pistola.cartucho = 12;
+            
         }
         else
         {
@@ -46,11 +46,12 @@ public class ColetarPistola : MonoBehaviour
                 this.GetComponent<BoxCollider>().enabled = false;
                 textoDoBotaoDeAcao.SetActive(false);
                 textoDaAcao.SetActive(false);
-                pistolaFalsa.SetActive(false);
+              
                 pistolaReal.SetActive(true);
                 miraExtra.SetActive(false);
                 indicador.SetActive(false);
                 triggerZumbi.SetActive(true);
+                Pistola.cartucho = 12;
             }
         }
     }

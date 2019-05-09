@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ColetarRecarga.cs" />
     <Compile Include="Assets\Scripts\Abertura.cs" />
     <Compile Include="Assets\Scripts\AnimacaoDaTocha.cs" />
     <Compile Include="Assets\Scripts\ColetarPistola.cs" />

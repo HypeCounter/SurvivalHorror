@@ -6,7 +6,7 @@ public class Zumbi : MonoBehaviour
 {
     [SerializeField] private float velocidade = .5f;
     [SerializeField] private GameObject jogador;
-    private int resistencia = 50;
+    [SerializeField] private int resistencia = 50;
     private Rigidbody rigidbodyZumbi;
     private Animator animatorZumbi;
     private Vector3 direcao;
