@@ -46,7 +46,7 @@ public class ColetarPistola : MonoBehaviour
                 this.GetComponent<BoxCollider>().enabled = false;
                 textoDoBotaoDeAcao.SetActive(false);
                 textoDaAcao.SetActive(false);
-              
+                pistolaFalsa.SetActive(false);
                 pistolaReal.SetActive(true);
                 miraExtra.SetActive(false);
                 indicador.SetActive(false);
