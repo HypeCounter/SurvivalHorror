@@ -18,7 +18,7 @@ public class TriggerColetaveis : MonoBehaviour
 
     private IEnumerator ExibeMensagem()
     {
-        caixaTexto.GetComponent<Text>().text = "Isso vais ser bem util!";
+        caixaTexto.GetComponent<Text>().text = "Munição! Ótimo!";
         yield return new WaitForSeconds(2.5f);
         jogador.GetComponent<FirstPersonController>().enabled = true;
         caixaTexto.GetComponent<Text>().text = "";
