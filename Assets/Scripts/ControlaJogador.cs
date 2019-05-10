@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ControlaJogador : MonoBehaviour {
 
-    [SerializeField] private int resistencia = 100;
+    public int resistencia = 100;
     [SerializeField] private float distanciaParaAlvo;
     [SerializeField] GameObject gameOver;
     [SerializeField] private float tempoMorte = 10;

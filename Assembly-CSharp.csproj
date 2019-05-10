@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\ColetarPistola.cs" />
     <Compile Include="Assets\Scripts\ControlaJogador.cs" />
     <Compile Include="Assets\Scripts\ControlaPorta.cs" />
+    <Compile Include="Assets\Scripts\KitMedico.cs" />
     <Compile Include="Assets\Scripts\Pistola.cs" />
     <Compile Include="Assets\Scripts\PrimeiroTrigger.cs" />
     <Compile Include="Assets\Scripts\SpawnarZumbi.cs" />
