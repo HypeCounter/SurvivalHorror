@@ -19,7 +19,7 @@ public class Pistola : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             if (cartucho >= 1) {
-                textSemBala.SetActive(true);
+               
                 if (estaAtirando == false)
                 {
                     StartCoroutine(Atirar());
@@ -75,14 +75,14 @@ public class Pistola : MonoBehaviour
             trajetoria.transform.SendMessage("SofrerDano",
                                             dano,
                                             SendMessageOptions.DontRequireReceiver);
-            Debug.Log(dano);
+            Debug.Log("dano"+dano);
         }
         
         yield return new WaitForSeconds(.5f);
         estaAtirando = false;
         efeitoDisparo.SetActive(false);
         cartucho--;
-        Debug.Log(cartucho);
+        Debug.Log("bala"+cartucho);
 
     }
 }
