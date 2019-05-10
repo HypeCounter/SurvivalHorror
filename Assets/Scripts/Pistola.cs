@@ -8,6 +8,7 @@ public class Pistola : MonoBehaviour
     [SerializeField] GameObject efeitoDisparo;
     [SerializeField] AudioSource somDisparo;
     [SerializeField] GameObject balistica;
+    [SerializeField] GameObject textSemBala;
 
     public static int cartucho;
 
@@ -18,15 +19,19 @@ public class Pistola : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             if (cartucho >= 1) {
+                textSemBala.SetActive(true);
                 if (estaAtirando == false)
                 {
                     StartCoroutine(Atirar());
                 }
+
             }
             else
             {
 
                 Debug.Log("SEM BALA");
+                NoAmmo();
+
                 /// informar jogador sem bala
             }
         }
@@ -34,6 +39,19 @@ public class Pistola : MonoBehaviour
         Debug.DrawRay(  balistica.transform.position,
                         transform.TransformDirection(Vector3.forward * 100), 
                         Color.red);
+    }
+
+    private void NoAmmo()
+    {
+        textSemBala.SetActive(true);
+        StartCoroutine("WaitText");
+        textSemBala.SetActive(false);
+    }
+
+    IEnumerator WaitText()
+    {
+        yield return new WaitForSeconds(2f);
+        
     }
 
     private IEnumerator Atirar()
